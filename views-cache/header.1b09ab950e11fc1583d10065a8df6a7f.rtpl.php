@@ -1,0 +1,17 @@
+<?php if(!class_exists('Rain\Tpl')){exit;}?><!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Simple Example Bootgrid (Server Side) with PHP, MySQL and Ajax</title>
+<link rel="stylesheet" href="./res/site/dist/bootstrap.min.css" type="text/css" media="all">
+<link href="./res/site/dist/jquery.bootgrid.css" rel="stylesheet" />
+<script src="./res/site/dist/jquery-1.11.1.min.js"></script>
+<script src="./res/site/dist/bootstrap.min.js"></script>
+<script src="./res/site/dist/jquery.bootgrid.min.js"></script>
+</head>
+
+<body>
+       
+
+
+        
