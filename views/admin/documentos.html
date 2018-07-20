@@ -39,6 +39,7 @@
                   <th>Tipo de Execução</th>
                   <th>Setor</th>
                   <th>Arquivo</th>
+                  <th>Arquivo</th>
                   <th></th>
                 </tr>
                 </thead>
@@ -49,7 +50,9 @@
                     <td>{$value.periodo}</td>
                     <td>{$value.tipo}</td>
                     <td>{$value.setor}</td>
-                    <td>{$value.arquivo}</td>
+                     <td>{$value.arquivo}</td>
+                    <td><a href="/res/site/upload/{$value.arquivo}" class="btn btn-primary btn-xs">
+                        <!--{$value.arquivo}-->Baixar PDF</a></td>
                     <td>
                       <a href="/admin/documentos/{$value.id}" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Editar</a>
                       <a href="/admin/documentos/{$value.id}/delete" onclick="return confirm('Deseja realmente excluir este registro?')" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>

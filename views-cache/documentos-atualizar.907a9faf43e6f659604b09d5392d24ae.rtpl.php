@@ -30,16 +30,22 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <form class="form-horizontal" role="form" action="/admin/documentos/cadastrar" method="post" enctype="multipart/form-data">
+                <form class="form-horizontal" role="form" action="/admin/documentos/<?php echo htmlspecialchars( $documentos["id"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" method="post" enctype="multipart/form-data">
                   <!-- text input -->
                   <div class="form-group">
                     <label for="cidade">Cidade</label>
                     <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Digite o nome da cidade" value="<?php echo htmlspecialchars( $documentos["cidade"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" required>
                   </div>
-                  <div class="form-group">
-                    <label for="periodo">Período</label>
-                    <input type="date" class="form-control" id="periodo" name="periodo" value="<?php echo htmlspecialchars( $documentos["periodo"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" required>
+                   <!-- Date mm/dd/yyyy -->
+                <div class="form-group">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                    </div>
+                    <input type="text" class="form-control" id="periodo" name="periodo" data-inputmask="'alias': 'yyyy/mm/dd'" data-mask>
                   </div>
+                  <!-- /.input group -->
+                </div>
                   <div class="form-group">
                     <label for="tipo">Tipo de Execução</label>
                     <input type="text" class="form-control" id="tipo" name="tipo" placeholder="Informe o tipo de execução" value="<?php echo htmlspecialchars( $documentos["tipo"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" required>

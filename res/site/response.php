@@ -26,7 +26,7 @@
 		$where .=" ORDER By ".key($params['sort']) .' '.current($params['sort'])." ";
 	}
 	// getting total number records without any search
-	$sql = "SELECT * FROM `prestacao` ";
+	$sql = "SELECT * FROM `documentos` ";
 	$sqlTot .= $sql;
 	$sqlRec .= $sql;
 	

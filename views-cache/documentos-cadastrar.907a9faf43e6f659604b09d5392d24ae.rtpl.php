@@ -36,10 +36,16 @@
                     <label for="cidade">Cidade</label>
                     <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Digite o nome da cidade" required>
                   </div>
-                  <div class="form-group">
-                    <label for="periodo">Período</label>
-                    <input type="date" class="form-control" id="periodo" name="periodo" required>
+                  <!-- Date mm/dd/yyyy -->
+                <div class="form-group">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                    </div>
+                    <input type="text" class="form-control" id="periodo" name="periodo" data-inputmask="'alias': 'yyyy/mm/dd'" data-mask>
                   </div>
+                  <!-- /.input group -->
+                </div>
                   <div class="form-group">
                     <label for="tipo">Tipo de Execução</label>
                     <input type="text" class="form-control" id="tipo" name="tipo" placeholder="Informe o tipo de execução" required>
@@ -69,8 +75,15 @@
       </div><!-- /.container-fluid -->
     </section>
     
-    
-    
+    <script>
+      
+     $ (function() {
+          //Datemask2 mm/dd/yyyy
+    $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
+      )};
+      
+      
+      </script>    
     
    
 

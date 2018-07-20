@@ -4,7 +4,7 @@
 		<table id="employee_grid" class="table table-condensed table-hover table-striped" width="100%" cellspacing="0">
         <thead>
             <tr>
-                <!--<th data-column-id="Name" data-type="numeric">Empd</th>-->
+                <!--<th data-column-id="id" data-type="numeric">Empd</th>-->
                 <th data-column-id="cidade">Cidade</th>
 				<th data-column-id="periodo">Período</th>
                 <th data-column-id="tipo">Tipo de Execução</th>
@@ -12,7 +12,7 @@
                 <th data-column-id="arquivo">Arquivo</th>
             </tr>
         </thead>
- 
+
         
     </table>
     </div>
@@ -31,7 +31,7 @@ $( document ).ready(function() {
 				id: "b0df282a-0d67-40e5-8558-c9e93b7befed"
 			};
 		},
-		url: "./res/site/response.php",
+		url: "/res/site/response.php",
 		formatters: {
 			
 		}

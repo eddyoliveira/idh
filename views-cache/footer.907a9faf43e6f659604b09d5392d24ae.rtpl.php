@@ -38,6 +38,11 @@
 <!-- AdminLTE for demo purposes -->
 <script src="/res/admin/dist/js/demo.js"></script>
 
+<!-- InputMask -->
+<script src="/res/admin/plugins/input-mask/jquery.inputmask.js"></script>
+<script src="/res/admin/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+<script src="/res/admin/plugins/input-mask/jquery.inputmask.extensions.js"></script>
+
 
 <!-- page script -->
 <script>
@@ -51,6 +56,11 @@
       "info": true,
       "autoWidth": false
     });
+      
+      //Datemask dd/mm/yyyy
+    $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
+    //Datemask2 mm/dd/yyyy
+    $('#periodo').inputmask('yyyy/mm/dd', { 'placeholder': 'yyyy/mm/dd' })
   });
     
 
