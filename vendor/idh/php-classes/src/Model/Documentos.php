@@ -29,10 +29,9 @@ class Documentos extends Model {
             ":arquivo"=>$this->getarquivo(),
         ));
         
-        
         if(isset($results[0]) && !empty($results[0])){
         $this->setData($results[0]);
-}
+        }
     }
     
     public function get($id)
@@ -116,6 +115,8 @@ class Documentos extends Model {
               
         
         $this->checkPhoto();
+        
+        return $file['name'];
     }
 }
 

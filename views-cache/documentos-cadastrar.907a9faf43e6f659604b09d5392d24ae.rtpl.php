@@ -42,7 +42,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="fa fa-calendar"></i></span>
                     </div>
-                    <input type="text" class="form-control" id="periodo" name="periodo" data-inputmask="'alias': 'yyyy/mm/dd'" data-mask>
+                    <input type="text" class="form-control" id="periodo" name="periodo" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
                   </div>
                   <!-- /.input group -->
                 </div>
@@ -79,7 +79,7 @@
       
      $ (function() {
           //Datemask2 mm/dd/yyyy
-    $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
+    $('#datemask2').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
       )};
       
       

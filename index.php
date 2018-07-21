@@ -11,9 +11,17 @@ use \idh\PageAdmin;
 use \idh\Model\User;
 use \idh\Model\Documentos;
 
-$app = new \Slim\Slim();
 
-$app->config('debug', true);
+/*$app = new \Slim\Slim();*/
+
+$app = new \Slim\App();
+
+
+// Create and configure Slim app
+$config = ['settings' => [
+    'addContentLengthHeader' => false,
+]];
+$app = new \Slim\App($config);
 
 $app->get('/', function() {
     
@@ -91,24 +99,26 @@ $app->post('/admin/documentos/cadastrar', function() {
     
     User::verifyLogin();
     
+    $documentos = new Documentos(); 
+    
+    $doc = '';
+    
+    if($_FILES["file"]["name"] !== ""){
+      $doc = $documentos->setPhoto($_FILES['file']);
+    } 
+    
+    
     $dados = array(
         'cidade' => $_POST['cidade'],
         'periodo' => $_POST['periodo'],
         'tipo' => $_POST['tipo'],
         'setor' => $_POST['setor'],
-        'arquivo' => $_FILES['file']['name'],
+        'arquivo' => $doc,
     );
-    
-    
-    $documentos = new Documentos(); 
     
     $documentos->setData($dados);
     
     $documentos->save();
-    
-    
-    
-    if($_FILES["file"]["name"] !== "") $documentos->setPhoto($_FILES['file']);
     
 	header("Location: /admin/documentos");
     exit;
@@ -164,7 +174,7 @@ $app->post('/admin/documentos/:id', function($id) {
 });
 
 
-$app->get('/admin/documentos/:id/delete', function($id) {
+$app->delete('/admin/documentos/:id/delete', function($id) {
     
     User::verifyLogin();
     
@@ -180,6 +190,12 @@ $app->get('/admin/documentos/:id/delete', function($id) {
 
 
 });
+
+
+
+
+
+
 
 
 $app->run();
