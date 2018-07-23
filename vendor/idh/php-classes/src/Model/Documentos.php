@@ -56,6 +56,19 @@ class Documentos extends Model {
         ]);
     }
     
+    
+    /* public function delete()
+    {
+        
+        $sql = new Sql();
+        
+        $sql->query("CALL sp_documentos_delete(:id)", [
+            ':id'=>$this->getid()
+        ]);
+    }
+    */
+    
+    
    /* public function checkPhoto()
     {
         if(file_exists(
